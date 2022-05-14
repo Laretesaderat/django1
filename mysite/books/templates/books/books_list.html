@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>books</title>
+</head>
+<body>
+{%for book in books%}
+    <div>
+        <h1><a href="">{{book.name}}</a> </h1>
+        <p>Genres:{%for genre in book.genres.all%}
+        {{genre}}
+        {% endfor %}</p>
+        <p>{%for author in book.authors.all%}
+        Author:{{author}}
+        {% endfor %}</p>
+        <p> book year publish:{{book.date}}</p>
+    </div>
+{% endfor %}
+</body>
+</html>
